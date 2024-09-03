@@ -33,7 +33,5 @@ int main(){
     cout<<"Insurance: Rp"<<insurance<< endl;
     cout<<"Net Salary: Rp"<<net_salary<< endl;
 
-
-
     return 0;
 }
