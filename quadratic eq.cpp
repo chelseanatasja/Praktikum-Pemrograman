@@ -22,14 +22,14 @@ int main()
         float x2;
         x1 = (-b+sqrt(d))/2*a;
         x2 = (-b-sqrt(d))/2*a;
-        cout<<"x1= "<<x1<<endl<<"x2= "<<x2<<endl;
+        cout<<"x1= "<<x1<<endl<<"x2= "<<x2;
     }
 
 
      if(d==0){
         float x;
         x = -b/(2*a);
-        cout<<"x = "<<x<<endl;
+        cout<<"x = "<<x;
     }
 
      if(d<0){
