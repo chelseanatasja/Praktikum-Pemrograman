@@ -36,7 +36,6 @@ int main()
         cout<<"There are no real roots";
     }
 
-
     return 0;
 
 }
