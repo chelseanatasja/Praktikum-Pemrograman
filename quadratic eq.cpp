@@ -6,12 +6,12 @@ using namespace std;
 int main()
 {
     float a, b, c;
-
-    cout<<"a coefficient = ";
+    cout<<"Standard form: ax^2+bx+c=0"<<endl;
+    cout<<"Input a = ";
     cin>>a;
-    cout<<"b coeffiicient = ";
+    cout<<"Input b = ";
     cin>>b;
-    cout<<"c coefficient = ";
+    cout<<"Input c = ";
     cin>>c;
 
     float d;
@@ -26,13 +26,13 @@ int main()
     }
 
 
-     if(d==0){
+     else if(d==0){
         float x;
         x = -b/(2*a);
         cout<<"x = "<<x;
     }
 
-     if(d<0){
+     else {
         cout<<"There are no real roots";
     }
 
