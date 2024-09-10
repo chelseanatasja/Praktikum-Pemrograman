@@ -27,5 +27,7 @@ jobs:
 
       - name: Run the program
         run: |
-          echo "Running the program..."
-          echo -e "1\n-3\n2" | Code_soal_1
+          echo "Running the program with test input..."
+          # Simulating input for the program
+          echo -e "1\n-3\n2" | ./quadratic_solver
+
