@@ -14,9 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: chmod
-      run: git update-index --chmod=+x ./Code_soal_1.cpp
-
     - name: configure
       run: ./Code_soal_1.cpp
 
