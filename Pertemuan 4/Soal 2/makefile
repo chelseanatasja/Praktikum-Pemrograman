@@ -2,10 +2,10 @@
 CXXFLAGS = -Wall -g
 
 # Define the target executable
-TARGET = multiplication
+TARGET = test_multiplication
 
 # Define the source files
-SRCS = multiplication.cpp
+SRCS = test_multiplication.cpp
 
 # Define the object files
 OBJS = $(SRCS:.cpp=.o)
