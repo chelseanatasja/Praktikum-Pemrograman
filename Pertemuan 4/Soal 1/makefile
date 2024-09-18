@@ -5,10 +5,10 @@ CXX = g++
 CXXFLAGS = -Wall -g
 
 # Define the target executable
-TARGET = sum
+TARGET = test_sum
 
 # Define the source files
-SRCS = sum.cpp
+SRCS = test_sum.cpp
 
 # Define the object files
 OBJS = $(SRCS:.cpp=.o)
