@@ -53,10 +53,13 @@ int main() {
     // Reverse the array using the reverseArray function
     std::vector<int> reversedArray = reverseArray(arrayToReverse);
 
-    // Print the reversed array
-    std::cout << "Reversed Array: " << std::endl;
-    for (int i : reversedArray) {
-        std::cout << i << " "; // Print each element of the reversed array
+    // Print the reversed array with commas between the elements
+    std::cout << "Reversed Array: ";
+    for (size_t i = 0; i < reversedArray.size(); ++i) {
+        std::cout << reversedArray[i];
+        if (i != reversedArray.size() - 1) { // Add comma after every element except the last one
+            std::cout << ", ";
+        }
     }
     std::cout << std::endl; // Newline for formatting
 
