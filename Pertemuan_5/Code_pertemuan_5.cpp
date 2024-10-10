@@ -1,48 +1,64 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
+// Function to generate FizzBuzz and store it in a vector
 std::vector<std::string> fizzBuzz() {
-    std::vector<std::string> results;
-
-    for(int i=1; i<=100; ++i){
-        if(i % 3 == 0 && i % 5 == 0){
-        results.push_back("FizzBuzz");
-        } else if(i % 3 == 0){
-            results.push_back("Fizz");
-        } else if(i % 5 == 0){
-            results.push_back("Buzz");
-        } else{
-            results.push_back(std::to_string(i));
+    std::vector<std::string> result; // Vector to store FizzBuzz results
+    for (int i = 1; i <= 100; ++i) { // Loop through numbers from 1 to 100
+        if (i % 3 == 0 && i % 5 == 0) { // If divisible by both 3 and 5
+            result.push_back("FizzBuzz");
+        } else if (i % 3 == 0) { // If divisible by 3 only
+            result.push_back("Fizz");
+        } else if (i % 5 == 0) { // If divisible by 5 only
+            result.push_back("Buzz");
+        } else { // If not divisible by 3 or 5, store the number as a string
+            result.push_back(std::to_string(i));
         }
     }
-    return result;
-    }
+    return result; // Return the vector containing FizzBuzz results
+}
 
-    std::vector<int> reverseArray(const std::vector<int>& arr) {
-    std::vector<int> reversedArr;
-    for (int i = arr.size() - 1; i >= 0; --i) {
-        reversedArr.push_back(arr[i]);
-    }
-    return reversedArr;
+// Function to reverse a vector of integers
+std::vector<int> reverseArray(const std::vector<int>& inputArray) {
+    // Create a new vector with elements from inputArray in reverse order
+    std::vector<int> reversedArray(inputArray.rbegin(), inputArray.rend());
+    return reversedArray; // Return the reversed vector
 }
 
 int main() {
-    std::vector<std::string> fizzBuzzResult = fizzBuzz();
-    
-    for (const std::string& str : fizzBuzzResult) {
-        std::cout << str << std::endl;
+    // Problem 1: FizzBuzz
+    std::vector<std::string> fizzBuzzResult = fizzBuzz(); // Get FizzBuzz results
+    std::cout << "FizzBuzz Results: " << std::endl;
+    // Print FizzBuzz results, one per line
+    for (const std::string& s : fizzBuzzResult) {
+        std::cout << s << std::endl;
     }
 
-    std::vector<int> arr = {1, 2, 3, 4, 5};
-    std::vector<int> reversedArr = reverseArray(arr);
+    // Problem 2: Reverse an Array
+    std::vector<int> arrayToReverse; // Vector to store user input array
+    int n, element;
 
-    std::cout << "Reversed array: ";
-    for (int num : reversedArr) {
-        std::cout << num << " ";
+    // Ask the user for the number of elements in the array
+    std::cout << "\nEnter the number of elements in the array: ";
+    std::cin >> n;
+
+    // Ask the user to enter each element of the array
+    std::cout << "Enter the elements of the array: " << std::endl;
+    for (int i = 0; i < n; ++i) {
+        std::cin >> element; // Take each element as input
+        arrayToReverse.push_back(element); // Store the element in the vector
     }
-    std::cout << std::endl;
 
-    return 0;
+    // Reverse the array using the reverseArray function
+    std::vector<int> reversedArray = reverseArray(arrayToReverse);
+
+    // Print the reversed array
+    std::cout << "Reversed Array: " << std::endl;
+    for (int i : reversedArray) {
+        std::cout << i << " "; // Print each element of the reversed array
+    }
+    std::cout << std::endl; // Newline for formatting
+
+    return 0; // End of program
 }
-    
-
